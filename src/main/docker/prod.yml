@@ -1,0 +1,18 @@
+seven-elasticsearch:
+  container_name: seven-elasticsearch
+  image: elasticsearch:1.7.3
+  # volumes:
+  #   - ~/volumes/jhipster/SEven/elasticsearch/:/usr/share/elasticsearch/data/
+  ports:
+    - "9200:9200"
+    - "9300:9300"
+seven-postgresql:
+  container_name: seven-postgresql
+  image: postgres:9.4.5
+  # volumes:
+  #   - ~/volumes/jhipster/SEven/postgresql/:/var/lib/postgresql/
+  environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=postgres
+  ports:
+    - "5432:5432"
